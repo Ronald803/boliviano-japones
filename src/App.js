@@ -11,10 +11,10 @@ import CoursesPage from './pages/CoursesPage';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App fondo-pantalla">
       <Navbar/>
       <BrowserRouter>
-        <div>
+        <div className='' style={{"marginLeft":"auto","marginRight":"auto","maxWidth":"1200px","minHeight":"350px"}}>
           <Routes>
               <Route path='/'               element={<HomePage/>}/>
               <Route path='/users'          element={<UserManagementPage/>}/>

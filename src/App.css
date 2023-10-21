@@ -1,38 +1,17 @@
-.App {
-  text-align: center;
+.fondo{
+  background: linear-gradient(
+    180deg,
+    rgb(98, 146, 84) 0%,
+    rgb(56, 187, 44) 15%,
+    rgb(13, 90, 11) 30%,
+    rgb(6, 65, 29) 45%,
+    rgb(34, 15, 33) 100%
+  );  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.fondo-pantalla {
+background-image: url('/public/img/ingles-portada.webp');
+background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
+background-repeat: no-repeat; /* Evita que la imagen se repita */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
