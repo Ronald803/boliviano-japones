@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { loginToBackend } from '../axiosRequests/userRequests';
-//import successAlert from './alerts/successAler';
-//import errorAlert from './alerts/errorAlert';
+import successAlert from './alerts/successAlert';
+import errorAlert from './alerts/errorAlert';
 
 function LoginForm(props) {
     const {rol} = props;
@@ -13,20 +13,21 @@ function LoginForm(props) {
         e.preventDefault();
         for(const property in user){
             if(user[property]===""){
-                //return errorAlert("Todos los datos son necesarios para iniciar sesión"+rol)
+                return errorAlert("Todos los datos son necesarios para iniciar sesión"+rol)
             }
         }
+        console.log(user);
         loginToBackend(user,rol)
             .then(answer=>{
                 console.log(answer.data);
                 if(answer.data.msg === "Incorrect information"){
-                    //errorAlert("Datos incorrectos")
+                    errorAlert("Datos incorrectos")
                 }else{
                     localStorage.setItem('t',answer.data.token);
                     localStorage.setItem('n',answer.data.name);
                     localStorage.setItem('r',rol);
                     localStorage.setItem('c',answer.data.classes);
-                    //successAlert("Bienvenido");
+                    successAlert(`Bienvenido ${answer.data.name}`);
                     setTimeout(() => {
                         window.location.reload()
                     }, 2500);
