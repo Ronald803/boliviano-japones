@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import LoginForm from '../components/LoginForm'
-//import CoursesPage from './CoursesPage'
-//import TestPage from './TestPage'
+import CoursesPage from './CoursesPage'
+import TestPage from './TestPage'
 
 function HomePage() {
   const [logged, setLogged] = useState("")
@@ -26,7 +26,7 @@ function HomePage() {
           <LoginForm rol={"student"}/>
         </div>
       }
-      {/* {
+      {
         logged === "teacher"
         &&
         <CoursesPage/>
@@ -35,7 +35,7 @@ function HomePage() {
         logged === "student"
         &&
         <TestPage/>        
-      } */}
+      }
     </div>
   </div>  
   )

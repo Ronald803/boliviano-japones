@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { enableTestBackend, getExamsBackend, getQuestionsToBackend } from '../axiosRequests/testsRequests';
+import { enableTestBackend, getExamsBackend, getQuestionsToBackend } from '../axiosRequests/testRequests';
 import TestDemoTeacher from './TestDemoTeacher';
 
 function TestTable(props) {

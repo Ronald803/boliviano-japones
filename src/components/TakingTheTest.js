@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { checkAnswersBackend, getQuestionsToBackend } from '../axiosRequests/testsRequests';
+import { checkAnswersBackend, getQuestionsToBackend } from '../axiosRequests/testRequests';
 
 function TakingTheTest(props) {
   const [finishedTest, setFinishedTest] = useState(false)
