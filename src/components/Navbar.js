@@ -6,7 +6,9 @@ function Navbar() {
   const [sessionStarted, setSessionStarted] = useState(false);
   let userName = localStorage.getItem('n')
   let rol = localStorage.getItem('r')
-  let classes = localStorage.getItem('c')?.split(',');
+  let classesString = localStorage.getItem('c')?.split(',');
+  let classes = [];
+  if(classesString != null){classes=classesString}
   let reconstructedClasses = [];
   let auxArray = [];
   classes.map((clas,index)=>{
