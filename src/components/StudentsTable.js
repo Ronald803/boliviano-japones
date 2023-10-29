@@ -29,7 +29,7 @@ function StudentsTable(props) {
                         return(
                         <tr>
                             <th>
-                                <div className='text-center'><span>{index}</span></div>
+                                <div className='text-center'><span>{index+1}</span></div>
                             </th>
                             <th>
                                 <div className='text-center'><span>{student.name}</span></div>

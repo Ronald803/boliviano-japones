@@ -28,7 +28,7 @@ function Navbar() {
     localStorage.setItem('t',"");
     localStorage.setItem('r',"");
     localStorage.setItem('testID',"");
-    window.location.reload()
+    window.location.reload('/')
   }
   const chooseClasses = (idClasses,name)=>{
     localStorage.setItem('idClasses',idClasses)
@@ -47,6 +47,9 @@ function Navbar() {
         </button>
         <div className="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
           <ul className="navbar-nav text-end">
+            <li className="nav-item">
+              <a className="nav-link text-white " href="/">Inicio</a>
+            </li>
             {
               rol !== "teacher" &&
             <li className="nav-item">
