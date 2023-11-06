@@ -1,6 +1,6 @@
 import React from 'react'
 import successAlert from './alerts/successAlert'
-import { saveQuestionsBackend } from '../axiosRequests/testsRequests';
+import { saveQuestionsBackend } from '../axiosRequests/testRequests';
 import { useNavigate } from 'react-router-dom';
 
 function CreateQuestionsForm(props) {
