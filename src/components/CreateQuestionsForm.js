@@ -6,6 +6,8 @@ import { useNavigate } from 'react-router-dom';
 function CreateQuestionsForm(props) {
   const navigate = useNavigate()
   const { data } = props;
+  console.log(data);
+  let idTest = localStorage.getItem('newTestId')
   let questions = [];
   let arrayPossibleAnswers = [];
   for(let i=0; i<data.numberOfAnswers ; i++){arrayPossibleAnswers.push("")}
@@ -13,7 +15,7 @@ function CreateQuestionsForm(props) {
     {
     question: "",
     possibleAnswers: [...arrayPossibleAnswers],
-    test: data.testID,
+    test: idTest,
     answer: ""
     }) };
   console.log(questions);
@@ -26,6 +28,7 @@ function CreateQuestionsForm(props) {
                 console.log(q.data);
             })
             successAlert("Pregunta(s) registrada(s) correctamente")
+            localStorage.setItem('newTestId','')
             setTimeout(()=>{
                 navigate('/')
             },2000)
@@ -35,6 +38,7 @@ function CreateQuestionsForm(props) {
 }
 const handleAllChanges = (value,i,j,k) => {
   k===undefined ?  questions[i][j] = value : questions[i][j][k] = value;
+  console.log(questions);
 }  
   return (
       <div className='container mt-3'>

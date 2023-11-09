@@ -33,6 +33,7 @@ function CreateTestForm(props) {
       .then(answer=>{
         console.log(answer);
         console.log(answer.data._id);
+        localStorage.setItem('newTestId',answer.data._id)
         setNewTest({...newTest,testID:answer.data._id})
         console.log(newTest);
         infoTest(newTest);
