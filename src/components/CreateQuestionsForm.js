@@ -87,3 +87,8 @@ const handleAllChanges = (value,i,j,k) => {
 }
 
 export default CreateQuestionsForm
+
+        //["64fa9ace60fb28b890e2b28f","1ero Sec. A"],
+		//["64fa9ad560fb28b890e2b291","1ero Sec. B"],
+		//["64fa9add60fb28b890e2b293","2do Sec. A"],
+		//["64fa9ae060fb28b890e2b295","2do Sec. B"]

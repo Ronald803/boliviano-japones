@@ -56,12 +56,12 @@ function Navbar() {
               <a className="nav-link text-white " href="/test">Tareas</a>
             </li>
             }
-            {
+            {/* {
               rol === "teacher" &&
               <li className="nav-item">
                 <a className="nav-link text-white " href="/users">Usuarios</a>
               </li>
-            }
+            } */}
             {
               rol === "teacher" &&
               <li class="nav-item dropdown">

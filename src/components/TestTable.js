@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { enableTestBackend, getExamsBackend, getQuestionsToBackend } from '../axiosRequests/testRequests';
 import TestDemoTeacher from './TestDemoTeacher';
+import successAlert from './alerts/successAlert';
 
 function TestTable(props) {
     const {takeTheTest,setTheQuestions,infoClasses} = props
@@ -50,7 +51,14 @@ function TestTable(props) {
     }
     const enableSpecificTest = (idTest) => {
         enableTestBackend(idTest,infoClasses._id)
-            .then(answer=>console.log(answer))
+            .then(answer=>{
+                if (answer.data.msg == "desde controller addTestToClasses") {
+                    successAlert("Examen habilitado correctamente")
+                    setTimeout(() => {
+                        window.location.reload()
+                    }, 2500);
+                }
+            })
             .catch(e=>console.log(e))
     }
   return (
