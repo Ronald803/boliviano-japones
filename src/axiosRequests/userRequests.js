@@ -12,3 +12,7 @@ export function postStudentBackend(student){
 export function loginToBackend(infoUser,rol){
     return axios.post(`${url}/api/auth?rol=${rol}`,infoUser)
 }
+
+export function getStudentsBackend(rol){
+    return axios.get(`${url}/api/${rol}s/all`)
+}
