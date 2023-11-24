@@ -78,6 +78,8 @@ function LoginForm(props) {
                                 <option value="">Elige el curso al que perteneces</option>
                                 <option value="64fa9ace60fb28b890e2b28f">1ro Sec. A</option>
                                 <option value="64fa9ad560fb28b890e2b291">1ro Sec. B</option>
+                                <option value="64fa9b0e60fb28b890e2b2a3">6to Sec. A</option>
+                                <option value="64fa9b1260fb28b890e2b2a5">6to Sec. B</option>
                             </select>
                         </div>
                         <div className='bg-transparent  mb-3'>
